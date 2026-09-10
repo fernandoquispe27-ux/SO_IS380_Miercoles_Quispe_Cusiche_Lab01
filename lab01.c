@@ -30,6 +30,11 @@ int main() {
 		scanf("%d", &lista[i].prioridad);
 	}
 	return 0;
+
+	do {
+            printf("Prioridad (1-alta, 5-baja): ");
+            scanf("%d", &lista[i].prioridad);
+        } while (lista[i].prioridad < 1 || lista[i].prioridad > 5);
 }
 	int pos = buscarMayorPrioridad(lista, n);
 
