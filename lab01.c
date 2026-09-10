@@ -4,6 +4,10 @@ struct Proceso{
 	char nombre[20];
 	int prioridad; // 1 (alta) a 5 (baja)
 };
+
+int buscarMayorPrioridad(struct Proceso *procesos, int n) {
+    return 0;
+}
 int main() {
 	struct Proceso lista[5];
 	int n=5;
