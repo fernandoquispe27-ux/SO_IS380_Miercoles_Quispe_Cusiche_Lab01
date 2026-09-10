@@ -6,7 +6,13 @@ struct Proceso{
 };
 
 int buscarMayorPrioridad(struct Proceso *procesos, int n) {
-    return 0;
+    	int indiceMayor = 0;
+    	for (int i = 1; i < n; i++) {
+        	if (procesos[i].prioridad < procesos[indiceMayor].prioridad) {
+            		indiceMayor = i;
+        	}
+    	}	
+    	return indiceMayor;
 }
 int main() {
 	struct Proceso lista[5];
