@@ -31,3 +31,12 @@ int main() {
 	}
 	return 0;
 }
+	int pos = buscarMayorPrioridad(lista, n);
+
+	printf("\n Proceso de mayor prioridad \n");
+	printf("PID: %d\n", lista[pos].pid);
+	printf("Nombre: %s\n", lista[pos].nombre);
+	printf("Prioridad: %d\n", lista[pos].prioridad);
+
+	return 0;
+}
