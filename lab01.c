@@ -8,10 +8,12 @@ struct Proceso{
 int buscarMayorPrioridad(struct Proceso *procesos, int n) {
     	int indiceMayor = 0;
     	for (int i = 1; i < n; i++) {
-        	if (procesos[i].prioridad < procesos[indiceMayor].prioridad) {
+		// Aritmetica de punteros: (procesos + i) avanza en memoria
+        	// El operador -> accede al atributo de la estructura apuntada
+        	if ((procesos +i)->prioridad < (procesos + indiceMayor)->prioridad) {
             		indiceMayor = i;
         	}
-    	}	
+    	}
     	return indiceMayor;
 }
 int main() {
