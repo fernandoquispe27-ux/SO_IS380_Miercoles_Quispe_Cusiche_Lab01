@@ -16,6 +16,15 @@ int buscarMayorPrioridad(struct Proceso *procesos, int n) {
     	}
     	return indiceMayor;
 }
+
+void mostrarTodos(struct Proceso *procesos, int n) {
+    printf("\n--- Lista de Procesos Registrados ---\n");
+    for (int i = 0; i < n; i++) {
+        printf("PID: %d | Nombre: %s | Prioridad: %d\n", 
+               (procesos + i)->pid, (procesos + i)->nombre, (procesos + i)->prioridad);
+    }
+}
+
 int main() {
 	struct Proceso lista[5];
 	int n=5;
